@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone 14 pro max",
+      "value": "4000"
+    },
+    {
+      "id": 2,
+      "name": "Phone",
+      "value": "4000"
+    },
+    {
+      "id": 3,
+      "name": "Teste",
+      "value": "4000"
+    },
+    {
+      "id": 4,
+      "name": "Cadeira de computador",
+      "value": "4000"
+    },
+    {
+      "id": 5,
+      "name": "Máquina de lavar",
+      "value": "4000"
+    }
+  ]
+}
