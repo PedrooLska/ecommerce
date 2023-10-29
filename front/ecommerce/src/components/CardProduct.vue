@@ -1,5 +1,5 @@
 <template>
-  <div class="w-1/5 mt-5 mx-2 p-2 bg-white border rounded-lg">
+  <div class="flex flex-col justify-between mt-5 mx-2 p-2 bg-white border rounded-lg">
     <CardProductHeader 
       :product="product" 
     />

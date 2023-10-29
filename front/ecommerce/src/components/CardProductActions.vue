@@ -1,12 +1,12 @@
 <template>
-  <div class="flex justify-between">
-    <ButtonDefault width="w-3/4">
+  <div class="flex justify-between gap-1">
+    <ButtonDefault width="w-2/3">
       <template #content>
         COMPRAR
       </template>
     </ButtonDefault>
 
-    <ButtonDefault width="w-14">
+    <ButtonDefault width="w-1/3">
       <template #content>
         <ShoppingCartIcon class="w-6" />
       </template>

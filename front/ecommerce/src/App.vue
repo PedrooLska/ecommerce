@@ -1,12 +1,22 @@
 <template>
-  <div class="container mx-auto">
-    <div class="flex justify-center flex-wrap">
-      <CardProduct 
-        v-for="product in products" 
-        :key="product.id" 
-        :product="product" 
-        />
-    </div>
+  <div>
+    <header class="flex items-center justify-center h-28 bg-violet-400">
+      <nav>
+        <ul>
+          <li>sads</li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container mx-auto">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+        <CardProduct 
+          v-for="product in products" 
+          :key="product.id" 
+          :product="product" 
+          />
+      </div>
+    </section>
   </div>
 </template>
 
@@ -25,7 +35,6 @@ const getProducts=  async () => {
     products.value = await ProductsRepository.getAll()
   } catch (error) {
     products.value = []
-    alert('Não foi possivel obter a lista de produtos cadastrados. Por favor, tente novamente')
   }
 }
 

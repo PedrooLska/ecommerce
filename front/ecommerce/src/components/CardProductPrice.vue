@@ -4,7 +4,7 @@
       {{ formatterPrice(product.totalValue) }}
     </p>
 
-    <p class="text-violet-400"> 
+    <p class="flex flex-col text-violet-400"> 
       <span class="text-violet-400 text-xl font-medium">
         {{ formatterPrice(product.pixDiscountPrice) }}
       </span>
