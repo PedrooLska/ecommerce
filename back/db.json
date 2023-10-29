@@ -2,28 +2,76 @@
   "products": [
     {
       "id": 1,
-      "name": "Iphone 14 pro max",
-      "value": "4000"
+      "name": "Notebook Gamer Acer Nitro 5 AMD Ryzen 5 7535HS, 8GB, NVIDIA RTX 3050, SSD 512GB, 15.6 Full HD, Linux Gutta, Preto - AN515-47-R5SU",
+      "totalValue": 4315.78,
+      "pixDiscountPrice": 4099.99,
+      "totalEvaluations": 18,
+      "rating": 4,
+      "image": "https://images.kabum.com.br/produtos/fotos/471697/notebook-gamer-acer-nitro-5-an515-47-r5su-amd-ryzen-5-7535hs-8gb-nvidia-rtx-3050-ssd-512gb-15-6-full-hd-win-11-preto-nh-qlhal-001_1689859072_g.jpg"
     },
     {
       "id": 2,
-      "name": "Phone",
-      "value": "4000"
+      "name": "Processador Intel Core i5-12400F, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, LGA 1700 - BX8071512400F",
+      "totalValue": 1032.21,
+      "pixDiscountPrice": 928.99,
+      "totalEvaluations": 210,
+      "rating": 4,
+      "image": "https://images8.kabum.com.br/produtos/fotos/283718/processador-intel-core-i5-12400f-cache-xmb-xghz-xghz-max-turbo-lga-1700-bx8071512400f_1640094446_m.jpg"
     },
     {
       "id": 3,
-      "name": "Teste",
-      "value": "4000"
+      "name": "Processador Intel Core i5-12400, 2.5GHz (4.4GHz Max Turbo), Cache 18MB, LGA 1700 - BX8071512400",
+      "totalValue": 4315.78,
+      "pixDiscountPrice": 4099.99,
+      "totalEvaluations": 7,
+      "rating": 4,
+      "image": "https://images8.kabum.com.br/produtos/fotos/283718/processador-intel-core-i5-12400f-cache-xmb-xghz-xghz-max-turbo-lga-1700-bx8071512400f_1640094446_m.jpg"
     },
     {
       "id": 4,
-      "name": "Cadeira de computador",
-      "value": "4000"
+      "name": "Placa de Vídeo RX 6750 XT MECH 2X 12G V1 Radeon, 12GB GDDR6, FreeSync, Dual Fan",
+      "totalValue": 2210.52,
+      "pixDiscountPrice": 2099.99,
+      "totalEvaluations": 3,
+      "rating": 4,
+      "image": "https://images.kabum.com.br/produtos/fotos/475438/placa-de-video-rx-6750-xt-mech-2x-12g-v1-radeon-12gb-gddr6-freesync-dual-fan_1689965385_g.jpg"
     },
     {
       "id": 5,
-      "name": "Máquina de lavar",
-      "value": "4000"
+      "name": "Headset Gamer Redragon Zeus X, Chroma Mk.II, RGB, Surround 7.1, USB, Drivers 53MM, Preto/Vermelho - H510-RGB",
+      "totalValue": 317.64,
+      "pixDiscountPrice": 269.99,
+      "totalEvaluations": 344,
+      "rating": 4,
+      "image": "https://images.kabum.com.br/produtos/fotos/227818/headset-gamer-redragon-zeus-chroma-mk-ii-rgb-surround-7-1-usb-drivers-53mm-preto-vermelho-h510-rgb_1631555313_g.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Monitor Gamer LG UltraGear 27 Full HD, 144Hz, 1ms, IPS, HDMI e DisplayPort, HDR 10, 99% sRGB, FreeSync Premium, VESA - 27GN65R",
+      "totalValue": 1789.46,
+      "pixDiscountPrice": 1199.99,
+      "totalEvaluations": 493,
+      "rating": 3,
+      "image": "https://images.kabum.com.br/produtos/fotos/444038/monitor-gamer-lg-ultragear-27-full-hd-144hz-1ms-ips-hdmi-e-displayport-hdr-10-99-srgb-freesync-premium-vesa-27gn65r_1684763831_g.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Headset Sem Fio Gamer HyperX Cloud Stinger Core Som Surround 7.1, Drivers 40mm - HHSS1C-BA-BK/G",
+      "totalValue": 458.81,
+      "pixDiscountPrice": 389.99,
+      "totalEvaluations": 151,
+      "rating": 5,
+      "image": "https://images.kabum.com.br/produtos/fotos/114027/headset-sem-fio-gamer-hyperx-cloud-stinger-core-7-1-hhss1c-ba-bk-g_1597936019_g.jpg"
+    }
+    ,
+    {
+      "id": 8,
+      "name": "Headset Gamer HyperX Cloud II Sem Fio Som Surround 7.1, Drivers 53mm, Preto e Vermelho - 4P5K4AA",
+      "totalValue": 823.52,
+      "pixDiscountPrice": 699.99,
+      "totalEvaluations": 3124,
+      "rating": 2,
+      "image": "https://images.kabum.com.br/produtos/fotos/143077/headset-sem-fio-gamer-hyperx-cloud-ii-7-1-drivers-53mm-preto-hhsc2x-ba-rd-g_1611584616_g.jpg"
     }
   ]
 }
