@@ -13,13 +13,13 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 import type { PropType } from 'vue'
-import type Product from '../entities/products'
+import type IProduct from '@/entities/product'
 
 import Utils from '@/services/Utils'
 
 const props = defineProps({
   product: {
-    type: Object as PropType<Product>,
+    type: Object as PropType<IProduct>,
     default: () => {}
   }
 })

@@ -6,7 +6,10 @@
       </template>
     </ButtonDefault>
 
-    <ButtonDefault width="w-1/3">
+    <ButtonDefault 
+      width="w-1/3" 
+      @click="setProductCart"
+    >
       <template #content>
         <ShoppingCartIcon class="w-6" />
       </template>
@@ -18,14 +21,20 @@
 import { defineProps } from 'vue'
 import { ShoppingCartIcon } from '@heroicons/vue/24/solid'
 import type { PropType } from 'vue'
-import type Product from '../entities/products'
+
+import type IProduct from '@/entities/product'
+import cartStore from '@/stores/cart'
 
 import ButtonDefault from './ButtonDefault.vue'
 
-defineProps({
+const CartStore = cartStore()
+
+const props = defineProps({
   product: {
-    type: Object as PropType<Product>,
+    type: Object as PropType<IProduct>,
     required: true
   }
 })
+
+const setProductCart = (): void => CartStore.setCartList(props.product)
 </script>

@@ -1,22 +1,9 @@
 <template>
-  <div>
-    <header class="flex items-center justify-center h-28 bg-violet-400">
-      <nav>
-        <ul>
-          <li>sads</li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="container mx-auto">
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-        <CardProduct 
-          v-for="product in products" 
-          :key="product.id" 
-          :product="product" 
-          />
-      </div>
-    </section>
+  <div class="relative">
+    <HeaderSection class="flex items-center justify-center h-28 bg-violet-400" />
+    <ProductsSection :products="products" />
+      
+    <SidebarCart v-if="CartStore.isCartSidebarVisible" />
   </div>
 </template>
 
@@ -24,9 +11,14 @@
 import { ref } from 'vue'
 
 import ProductsRepository from './request/products'
-import type Product from './entities/products'
+import type Product from './entities/product'
 
-import CardProduct from './components/CardProduct.vue'; 
+import HeaderSection from './components/HeaderSection.vue'
+import ProductsSection from './components/ProductsSection.vue';
+import SidebarCart from './components/SidebarCart.vue';
+
+import cartStore from '@/stores/cart'
+const CartStore = cartStore()
 
 const products = ref<Product[]>([])
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-between mt-5 mx-2 p-2 bg-white border rounded-lg">
+  <div class="flex flex-col justify-between p-2 border rounded-lg">
     <CardProductHeader 
       :product="product" 
     />
@@ -9,7 +9,7 @@
     <CardProductPrice 
       :product="product" 
     />
-    <CardActions 
+    <CardProductActions 
       :product="product" 
     />
   </div>
@@ -18,16 +18,16 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 import type { PropType } from 'vue'
-import type Product from '../entities/products'
+import type IProduct from '@/entities/product'
 
 import CardProductHeader from './CardProductHeader.vue'
 import CardProductContent from './CardProductContent.vue'
 import CardProductPrice from './CardProductPrice.vue'
-import CardActions from './CardProductActions.vue'
+import CardProductActions from './CardProductActions.vue'
 
 defineProps({
   product: {
-    type: Object as PropType<Product>,
+    type: Object as PropType<IProduct>,
     default: () => {}
   }
 })

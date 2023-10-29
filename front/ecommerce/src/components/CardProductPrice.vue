@@ -1,6 +1,6 @@
 <template>
   <div class="flex-col mb-2">
-    <p class="text-gray-500 text-xs line-through"> 
+    <p class="text-gray-500 text-xs font-medium line-through"> 
       {{ formatterPrice(product.totalValue) }}
     </p>
 
@@ -9,7 +9,7 @@
         {{ formatterPrice(product.pixDiscountPrice) }}
       </span>
 
-      <span class="text-gray-500 text-xs">
+      <span class="text-gray-500 font-medium text-xs">
         Á vista no PIX
       </span>
     </p>
@@ -19,13 +19,13 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 import type { PropType } from 'vue'
-import type Product from '../entities/products'
+import type IProduct from '@/entities/product'
 
 import Utils from '@/services/Utils'
 
 defineProps({
   product: {
-    type: Object as PropType<Product>,
+    type: Object as PropType<IProduct>,
     default: () => {}
   }
 })
