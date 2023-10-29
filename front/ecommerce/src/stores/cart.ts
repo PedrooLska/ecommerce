@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
 import type ICart from '@/entities/cart'
@@ -7,6 +7,14 @@ import type IProduct from '@/entities/product'
 export default defineStore('cart', () => {
   const isCartSidebarVisible = ref<Boolean>(false)
   const cartList = ref<ICart[]>([])
+
+  const totalCart = computed((): number => {
+    return cartList.value.reduce((acc, { product }) => acc += product.totalValue, 0)
+  })
+
+  const totalCartPix = computed((): number => {
+    return cartList.value.reduce((acc, { product }) => acc += product.pixDiscountPrice, 0)
+  })
 
   const setIsCarSidebarVisible = (value: boolean): void => {
     isCartSidebarVisible.value = value
@@ -25,8 +33,8 @@ export default defineStore('cart', () => {
 
   const addQuantityProductCart = (product: IProduct): void => {
     const isVerifyProductIsAdded = cartList.value.findIndex(({ product: { id } }) => id === product.id)
-
-    if(cartList.value[isVerifyProductIsAdded].quantity === 100) {
+    
+    if(cartList.value[isVerifyProductIsAdded].quantity >= 20) {
       alert('Você atingiu a quantidade máxima disponível em estoque para a realização da compra.')
       return 
     }
@@ -40,8 +48,8 @@ export default defineStore('cart', () => {
     cartList.value[isVerifyProductIsAdded].quantity -= 1
 
     if(cartList.value[isVerifyProductIsAdded].quantity === 0) {
-      alert('Ao zerar a quantidade do item no carrinho, ele foi removido do seu carrinho.')
-      cartList.value.splice(isVerifyProductIsAdded)
+      alert('Ao zerar a quantidade do item no carrinho, ele será removido do seu carrinho.')
+      cartList.value = cartList.value.filter(({ product: { id } }) => id !== product.id)
       return 
     }
   }
@@ -52,6 +60,8 @@ export default defineStore('cart', () => {
     cartList, 
     setCartList,
     addQuantityProductCart,
-    removeQuantityProductCart
+    removeQuantityProductCart,
+    totalCart,
+    totalCartPix
   }
 })

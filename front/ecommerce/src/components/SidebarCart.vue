@@ -14,7 +14,7 @@
         <div class="flex items-center">
           <img 
             :src="cart.product.image" 
-            class="border border-gray-200 rounded-lg p-2 h-24 mr-2"
+            class="border border-gray-100 rounded-lg p-2 h-24 mr-2"
           >
   
           <div class="flex flex-col mr-2">
@@ -35,16 +35,16 @@
           <div class="flex flex-col items-center justify-center rounded-sm">
             <PlusIcon 
               @click="addQuantityProduct(cart.product)"
-              class="w-6 h-8 rounded-t-md text-violet-500 bg-gray-200 cursor-pointer hover:text-white hover:bg-violet-400"
+              class="w-6 h-8 rounded-t-md text-violet-500 bg-gray-50 cursor-pointer hover:text-white hover:bg-violet-500"
             />
   
-            <span class="w-full flex justify-center text-black bg-gray-200">
+            <span class="w-full flex justify-center text-black bg-gray-50">
               {{ cart.quantity }}
             </span>
   
             <MinusIcon 
               @click="removeQuantityProduct(cart.product)"
-              class="w-6 h-8 rounded-b-md text-violet-500 bg-gray-200 cursor-pointer hover:text-white hover:bg-violet-400" 
+              class="w-6 h-8 rounded-b-md text-violet-500 bg-gray-50 cursor-pointer hover:text-white hover:bg-violet-500" 
             />
           </div>
         </div>
@@ -52,8 +52,16 @@
     </div>
     
 
-    <div>
-      total
+    <div class="flex">
+      <div class="mr-2">
+        Total a prazo
+        {{ formatterPrice(CartStore.totalCart) }}
+      </div>
+  
+      <div>
+        Total no pix á vista
+        {{ formatterPrice(CartStore.totalCartPix) }}
+      </div>
     </div>
   </div>
 </template>
