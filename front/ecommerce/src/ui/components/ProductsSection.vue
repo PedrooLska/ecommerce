@@ -14,9 +14,9 @@
 import { defineProps } from 'vue'
 import type { PropType } from 'vue'
 
-import type IProduct from '@/entities/product'
+import type IProduct from '@/core/domain/entity/product'
 
-import CardProduct from './CardProduct.vue'; 
+import CardProduct from './CardProduct/CardProduct.vue'; 
 
 defineProps({
   products: {

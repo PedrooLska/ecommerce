@@ -52,15 +52,15 @@
     </div>
     
 
-    <div class="flex">
+    <div class="flex text-white font-medium">
       <div class="mr-2">
         Total a prazo
-        {{ formatterPrice(CartStore.totalCart) }}
+        {{ formatterPrice(CartStore.totalCart.totalValue) }}
       </div>
   
       <div>
         Total no pix á vista
-        {{ formatterPrice(CartStore.totalCartPix) }}
+        {{ formatterPrice(CartStore.totalCart.pixDiscountPrice) }}
       </div>
     </div>
   </div>
@@ -69,11 +69,11 @@
 <script setup lang="ts">
 import { XMarkIcon, PlusIcon, MinusIcon } from '@heroicons/vue/24/solid'
 
-import type IProduct from '@/entities/product'
+import type IProduct from '@/core/domain/entity/product'
 
-import Utils from '@/services/Utils'
+import Utils from '@/ui/services/utils'
 
-import cartStore from '@/stores/cart'
+import cartStore from '@/ui/stores/cart'
 const CartStore = cartStore()
 
 const formatterNameProduct = (value: string): string => Utils.formatterCutText(value, 68)

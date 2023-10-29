@@ -10,21 +10,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import ProductsRepository from './request/products'
-import type Product from './entities/product'
+import ProductRepository from '@/core/domain/repository/product'
+import type IProduct from '@/core/domain/entity/product'
 
-import HeaderSection from './components/HeaderSection.vue'
-import ProductsSection from './components/ProductsSection.vue';
-import SidebarCart from './components/SidebarCart.vue';
+import HeaderSection from '@/ui/components/HeaderSection.vue'
+import ProductsSection from '@/ui/components/ProductsSection.vue';
+import SidebarCart from '@/ui/components/SidebarCartSection.vue';
 
-import cartStore from '@/stores/cart'
+import cartStore from '@/ui/stores/cart'
 const CartStore = cartStore()
 
-const products = ref<Product[]>([])
+const products = ref<IProduct[]>([])
 
 const getProducts=  async () => {
   try {
-    products.value = await ProductsRepository.getAll()
+    products.value = await ProductRepository.getAll()
   } catch (error) {
     products.value = []
   }

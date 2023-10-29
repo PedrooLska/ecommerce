@@ -18,7 +18,7 @@
 <script setup lang="ts">
 import { ShoppingCartIcon } from '@heroicons/vue/24/solid'
 
-import cartStore from '@/stores/cart'
+import cartStore from '@/ui/stores/cart'
 const CartStore = cartStore()
 
 const setIsCarSidebarVisible = (): void => {

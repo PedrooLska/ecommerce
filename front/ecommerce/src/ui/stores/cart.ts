@@ -1,19 +1,23 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 
-import type ICart from '@/entities/cart'
-import type IProduct from '@/entities/product'
+import type ICart from '@/core/domain/entity/cart'
+import type IProduct from '@/core/domain/entity/product'
 
 export default defineStore('cart', () => {
   const isCartSidebarVisible = ref<Boolean>(false)
   const cartList = ref<ICart[]>([])
 
-  const totalCart = computed((): number => {
-    return cartList.value.reduce((acc, { product }) => acc += product.totalValue, 0)
-  })
+  const totalCart = computed((): any => {
+    return cartList.value.reduce((acc: any, { product }) => { 
+      acc.totalValue += product.totalValue
+      acc.pixDiscountPrice += product.pixDiscountPrice
 
-  const totalCartPix = computed((): number => {
-    return cartList.value.reduce((acc, { product }) => acc += product.pixDiscountPrice, 0)
+      return acc
+    }, {
+      totalValue: 0, 
+      pixDiscountPrice: 0
+    })
   })
 
   const setIsCarSidebarVisible = (value: boolean): void => {
@@ -62,6 +66,5 @@ export default defineStore('cart', () => {
     addQuantityProductCart,
     removeQuantityProductCart,
     totalCart,
-    totalCartPix
   }
 })

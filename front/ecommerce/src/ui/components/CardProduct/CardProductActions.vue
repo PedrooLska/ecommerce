@@ -22,10 +22,10 @@ import { defineProps } from 'vue'
 import { ShoppingCartIcon } from '@heroicons/vue/24/solid'
 import type { PropType } from 'vue'
 
-import type IProduct from '@/entities/product'
-import cartStore from '@/stores/cart'
+import type IProduct from '@/core/domain/entity/product'
+import cartStore from '@/ui/stores/cart'
 
-import ButtonDefault from './ButtonDefault.vue'
+import ButtonDefault from '../utils/ButtonDefault.vue'
 
 const CartStore = cartStore()
 

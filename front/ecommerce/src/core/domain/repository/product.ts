@@ -1,6 +1,6 @@
-import httpClient from './http-client'
+import httpClient from '../http-client'
 
-class ProductsRepository {
+class ProductRepository {
   async getAll(): Promise<any> {
     const { data } = await httpClient.get('/products')
     
@@ -8,4 +8,4 @@ class ProductsRepository {
   }
 }
 
-export default new ProductsRepository
+export default new ProductRepository
