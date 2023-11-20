@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center justify-center h-28 bg-violet-400 drop-shadow-md">
+  <header class="flex items-center justify-center h-16 bg-violet-400 drop-shadow-md">
     <div class="container mx-auto">
       <nav class="flex justify-end mr-10">
         <ul>

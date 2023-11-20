@@ -22,7 +22,7 @@ import { defineProps } from 'vue'
 import { ShoppingCartIcon } from '@heroicons/vue/24/solid'
 import type { PropType } from 'vue'
 
-import type IProduct from '@/core/domain/entity/product'
+import type IProduct from '@/core/entity/product'
 import cartStore from '@/ui/stores/cart'
 
 import ButtonDefault from '../utils/ButtonDefault.vue'
@@ -36,5 +36,8 @@ const props = defineProps({
   }
 })
 
-const setProductCart = (): void => CartStore.setCartList(props.product)
+const setProductCart = (): void => {
+  CartStore.setIsCarSidebarVisible(true)
+  CartStore.setCartList(props.product)
+}
 </script>

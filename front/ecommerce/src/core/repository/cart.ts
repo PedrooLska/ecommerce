@@ -10,7 +10,7 @@ class CartRepository {
   }
 
   async addProductCart(products: IProduct[]): Promise<any> {
-    await httpClient.post('/cart', products)
+    return await httpClient.post('/cart', products)
   }
 }
 

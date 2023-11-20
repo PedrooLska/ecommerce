@@ -1,21 +1,26 @@
 <template>
-  <div class="relative">
-    <HeaderSection class="flex items-center justify-center h-28 bg-violet-400" />
-    <ProductsSection :products="products" />
+  <div>
+    <HeaderSection />
+
+    <ProductSection 
+      :products="products"
+     />
       
-    <SidebarCart v-if="CartStore.isCartSidebarVisible" />
+    <SidebarCart 
+      v-if="CartStore.isCartSidebarVisible" 
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import ProductRepository from '@/core/domain/repository/product'
-import type IProduct from '@/core/domain/entity/product'
+import ProductRepository from '@/core/repository/product'
+import type IProduct from '@/core/entity/product'
 
 import HeaderSection from '@/ui/components/HeaderSection.vue'
-import ProductsSection from '@/ui/components/ProductsSection.vue';
-import SidebarCart from '@/ui/components/SidebarCartSection.vue';
+import ProductSection from '@/ui/components/ProductSection.vue';
+import SidebarCart from '@/ui/components/SidebarCart.vue';
 
 import cartStore from '@/ui/stores/cart'
 const CartStore = cartStore()

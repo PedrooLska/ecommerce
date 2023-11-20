@@ -1,7 +1,7 @@
 <template>
   <section class="container mx-auto py-5">
     <div class="grid gap-2 mx-2 mr-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-      <CardProduct 
+      <ProductSectionCard 
         v-for="product in products" 
         :key="product.id" 
         :product="product" 
@@ -14,9 +14,9 @@
 import { defineProps } from 'vue'
 import type { PropType } from 'vue'
 
-import type IProduct from '@/core/domain/entity/product'
+import type IProduct from '@/core/entity/product'
 
-import CardProduct from './CardProduct/CardProduct.vue'; 
+import ProductSectionCard from './ProductSectionCard/ProductSectionCard.vue'; 
 
 defineProps({
   products: {
