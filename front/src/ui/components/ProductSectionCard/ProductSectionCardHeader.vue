@@ -14,7 +14,7 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
 import type { PropType } from 'vue'
-import type IProduct from '@/core/domain/entity/product'
+import type IProduct from '@/core/entity/product'
 
 import { StarIcon } from '@heroicons/vue/24/solid'
 

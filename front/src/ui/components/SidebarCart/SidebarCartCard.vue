@@ -42,7 +42,7 @@
 
 <script setup lang="ts">
 import { defineProps } from 'vue'
-
+import type { PropType } from 'vue'
 import { PlusIcon, MinusIcon } from '@heroicons/vue/24/solid'
 
 import type IProduct from '@/core/entity/product'
